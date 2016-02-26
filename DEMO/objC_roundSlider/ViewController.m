@@ -6,7 +6,7 @@
 //  Copyright © 2015 Eugeny Akhmerov. All rights reserved.
 //
 
-#import "ViewController.h"/Users/Evgeniy
+#import "ViewController.h"
 #import "EVARoundSliderView.h"
 
 static CGFloat EVAWidth = 30.f;
@@ -91,7 +91,13 @@ static CGFloat EVAWidth = 30.f;
   return [[UIColor blackColor] colorWithAlphaComponent:0.7f];
 }
 
-//- (EVAArcDirection)arcDrawingDirectionForSlider:(EVARoundSliderView *)slider;
+- (EVAArcDirection)arcDrawingDirectionForSlider:(EVARoundSliderView *)slider {
+//  return EVAArcDirectionClockwise;
+  
+//  return EVAArcDirectionConterclockwise;
+  
+  return EVAArcDirectionCalculated;
+}
 
 - (EVATouchOffset)touchRecognizeOffsetForSlider:(EVARoundSliderView *)slider {
   EVATouchOffset offset = {
@@ -109,11 +115,13 @@ static CGFloat EVAWidth = 30.f;
 //- (UIView *)backgroundViewForSlider:(UIView *)slider {
 //}
 
-//- (UIView *)centerViewForSlider:(EVARoundSliderView *)slider {
-//  UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 200.f)];
-//  centerView.backgroundColor = [UIColor orangeColor];
-//  return centerView;
-//}
+- (UIView *)centerViewForSlider:(EVARoundSliderView *)slider {
+  return nil;
+  
+  UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 200.f)];
+  centerView.backgroundColor = [UIColor orangeColor];
+  return centerView;
+}
 
 - (UIView *)handleViewForSlider:(EVARoundSliderView *)slider atIndex:(NSUInteger)index {
   if (index == 0 && _handle1) {

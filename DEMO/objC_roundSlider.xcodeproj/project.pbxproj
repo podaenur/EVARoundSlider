@@ -15,10 +15,10 @@
 		045E4D331C5628B200FED83D /* objC_roundSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045E4D321C5628B200FED83D /* objC_roundSliderTests.m */; };
 		7A3CFAB41C7CC6C600C2574B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3CFAB31C7CC6C600C2574B /* ViewController.m */; };
 		7A5A7CDF1C6B4AD400342109 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5A7CDE1C6B4AD400342109 /* UIKit.framework */; };
-		7A92C9021C809A1100287DD1 /* EVAGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C8FB1C809A1100287DD1 /* EVAGradient.m */; };
-		7A92C9031C809A1100287DD1 /* EVAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C8FD1C809A1100287DD1 /* EVAMath.m */; };
-		7A92C9041C809A1100287DD1 /* EVARoundSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C8FF1C809A1100287DD1 /* EVARoundSliderView.m */; };
-		7A92C9051C809A1100287DD1 /* EVASliderArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9011C809A1100287DD1 /* EVASliderArcView.m */; };
+		7A92C9291C80A0EC00287DD1 /* EVAGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9221C80A0EC00287DD1 /* EVAGradient.m */; };
+		7A92C92A1C80A0EC00287DD1 /* EVAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9241C80A0EC00287DD1 /* EVAMath.m */; };
+		7A92C92B1C80A0EC00287DD1 /* EVARoundSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9261C80A0EC00287DD1 /* EVARoundSliderView.m */; };
+		7A92C92C1C80A0EC00287DD1 /* EVASliderArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9281C80A0EC00287DD1 /* EVASliderArcView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +46,14 @@
 		7A3CFAB21C7CC6C600C2574B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7A3CFAB31C7CC6C600C2574B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7A5A7CDE1C6B4AD400342109 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7A92C8FA1C809A1100287DD1 /* EVAGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAGradient.h; sourceTree = "<group>"; };
-		7A92C8FB1C809A1100287DD1 /* EVAGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAGradient.m; sourceTree = "<group>"; };
-		7A92C8FC1C809A1100287DD1 /* EVAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAMath.h; sourceTree = "<group>"; };
-		7A92C8FD1C809A1100287DD1 /* EVAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAMath.m; sourceTree = "<group>"; };
-		7A92C8FE1C809A1100287DD1 /* EVARoundSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVARoundSliderView.h; sourceTree = "<group>"; };
-		7A92C8FF1C809A1100287DD1 /* EVARoundSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVARoundSliderView.m; sourceTree = "<group>"; };
-		7A92C9001C809A1100287DD1 /* EVASliderArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVASliderArcView.h; sourceTree = "<group>"; };
-		7A92C9011C809A1100287DD1 /* EVASliderArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVASliderArcView.m; sourceTree = "<group>"; };
+		7A92C9211C80A0EC00287DD1 /* EVAGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAGradient.h; sourceTree = "<group>"; };
+		7A92C9221C80A0EC00287DD1 /* EVAGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAGradient.m; sourceTree = "<group>"; };
+		7A92C9231C80A0EC00287DD1 /* EVAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAMath.h; sourceTree = "<group>"; };
+		7A92C9241C80A0EC00287DD1 /* EVAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAMath.m; sourceTree = "<group>"; };
+		7A92C9251C80A0EC00287DD1 /* EVARoundSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVARoundSliderView.h; sourceTree = "<group>"; };
+		7A92C9261C80A0EC00287DD1 /* EVARoundSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVARoundSliderView.m; sourceTree = "<group>"; };
+		7A92C9271C80A0EC00287DD1 /* EVASliderArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVASliderArcView.h; sourceTree = "<group>"; };
+		7A92C9281C80A0EC00287DD1 /* EVASliderArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVASliderArcView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			children = (
 				7A5A7CDE1C6B4AD400342109 /* UIKit.framework */,
 				040BEC551C58C36E00E36696 /* Default-568h@2x.png */,
-				7A92C8F91C809A1100287DD1 /* EVARoundSlider */,
+				7A92C9201C80A0EC00287DD1 /* EVARoundSlider */,
 				045E4D151C5628B200FED83D /* objC_roundSlider */,
 				045E4D2F1C5628B200FED83D /* objC_roundSliderTests */,
 				045E4D141C5628B200FED83D /* Products */,
@@ -136,19 +136,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7A92C8F91C809A1100287DD1 /* EVARoundSlider */ = {
+		7A92C9201C80A0EC00287DD1 /* EVARoundSlider */ = {
 			isa = PBXGroup;
 			children = (
-				7A92C8FA1C809A1100287DD1 /* EVAGradient.h */,
-				7A92C8FB1C809A1100287DD1 /* EVAGradient.m */,
-				7A92C8FC1C809A1100287DD1 /* EVAMath.h */,
-				7A92C8FD1C809A1100287DD1 /* EVAMath.m */,
-				7A92C8FE1C809A1100287DD1 /* EVARoundSliderView.h */,
-				7A92C8FF1C809A1100287DD1 /* EVARoundSliderView.m */,
-				7A92C9001C809A1100287DD1 /* EVASliderArcView.h */,
-				7A92C9011C809A1100287DD1 /* EVASliderArcView.m */,
+				7A92C9211C80A0EC00287DD1 /* EVAGradient.h */,
+				7A92C9221C80A0EC00287DD1 /* EVAGradient.m */,
+				7A92C9231C80A0EC00287DD1 /* EVAMath.h */,
+				7A92C9241C80A0EC00287DD1 /* EVAMath.m */,
+				7A92C9251C80A0EC00287DD1 /* EVARoundSliderView.h */,
+				7A92C9261C80A0EC00287DD1 /* EVARoundSliderView.m */,
+				7A92C9271C80A0EC00287DD1 /* EVASliderArcView.h */,
+				7A92C9281C80A0EC00287DD1 /* EVASliderArcView.m */,
 			);
-			path = EVARoundSlider;
+			name = EVARoundSlider;
+			path = ../EVARoundSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				045E4D1C1C5628B200FED83D /* AppDelegate.m in Sources */,
-				7A92C9051C809A1100287DD1 /* EVASliderArcView.m in Sources */,
-				7A92C9031C809A1100287DD1 /* EVAMath.m in Sources */,
+				7A92C92C1C80A0EC00287DD1 /* EVASliderArcView.m in Sources */,
+				7A92C92A1C80A0EC00287DD1 /* EVAMath.m in Sources */,
 				7A3CFAB41C7CC6C600C2574B /* ViewController.m in Sources */,
-				7A92C9041C809A1100287DD1 /* EVARoundSliderView.m in Sources */,
-				7A92C9021C809A1100287DD1 /* EVAGradient.m in Sources */,
+				7A92C92B1C80A0EC00287DD1 /* EVARoundSliderView.m in Sources */,
+				7A92C9291C80A0EC00287DD1 /* EVAGradient.m in Sources */,
 				045E4D191C5628B200FED83D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

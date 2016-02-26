@@ -91,6 +91,10 @@
   NSAssert((_handles.count > 1), @"Method only for two handles");
   NSAssert(((angle >= 0) && (angle <= 360)), @"Angle beyon bounds");
   
+  if (_direction != EVAArcDirectionCalculated) {
+    return;
+  }
+  
   CGPoint p = [_math pointOnCircleWithCenter:_centerPoint radius:[self calculatedRadius] forAngle:(int)angle];
   BOOL flag = [_math whetherClockwiseDirectionByPoint:p betweenPoint:[_handles[@(0)] center] andPoint:[_handles[@(1)] center] atCenter:_centerPoint];
   [_arc setClockwise:flag];
@@ -280,7 +284,7 @@
 - (void)drawArc {
   if (_arc) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [_arc drawArcRadius:[self calculatedRadius] startPoint:[_handles[@(0)] center] endPoint:[_handles[@(1)] center] clockwise:YES];
+      [_arc drawArcRadius:[self calculatedRadius] startPoint:[_handles[@(0)] center] endPoint:[_handles[@(1)] center] clockwise:(_direction == EVAArcDirectionConterclockwise) ? NO : YES];
     });
   }
 }
@@ -343,7 +347,7 @@
         });
       }
       
-      if (flag2) {
+      if (flag2 && _sliderType == EVASliderTypeGradient) {
         dispatch_async(dispatch_get_main_queue(), ^{
           [self.delegate slider:self indicatorColorAtPosition:c];
         });
@@ -442,6 +446,10 @@
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)gesture {
   if (_handles.count < 2) {
+    return;
+  }
+  
+  if (_direction != EVAArcDirectionCalculated) {
     return;
   }
   
