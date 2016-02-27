@@ -18,13 +18,6 @@ $ git clone [http://github.com/podaenur/EVARoundSlider] EVARoundSlider
 You need to set UIView element on your storyboard and define is like EVARoundSliderView. EVARoundSlider has placeholder for IB (IB_DESIGNABLE).
 
 
-### Todos
-
- - Write Tests
- - Rethink Github Save
- - Add Code Comments
- - Add Night Mode
-
 License
 ----
 
