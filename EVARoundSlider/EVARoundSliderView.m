@@ -11,6 +11,8 @@
 #import "EVAGradient.h"
 #import "EVASliderArcView.h"
 
+IB_DESIGNABLE
+
 @interface EVARoundSliderView ()
 
 //  static
@@ -369,6 +371,18 @@
 #pragma mark o- Overrided
 
 - (void)drawRect:(CGRect)rect {
+#if TARGET_INTERFACE_BUILDER
+  UILabel *placeholder = [[UILabel alloc] initWithFrame:self.bounds];
+  placeholder.textColor = [UIColor grayColor];
+  placeholder.backgroundColor = [UIColor lightGrayColor];
+  placeholder.textAlignment = NSTextAlignmentCenter;
+  placeholder.text = NSStringFromClass(self.class);
+  self.layer.cornerRadius = 5.f;
+  self.layer.borderWidth = 1.f;
+  self.layer.borderColor = [UIColor blackColor].CGColor;
+  self.clipsToBounds = YES;
+  [self addSubview:placeholder];
+#else
   [super drawRect:rect];
   
   if (!self.isSetuped) {
@@ -376,6 +390,7 @@
   } else {
     //  рисуем арку
   }
+#endif
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
