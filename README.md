@@ -13,7 +13,7 @@ EVARoundSlider - round slider with extended typing. You can use plain or gradien
 ### Installation
 
 ```sh
-$ git clone [http://github.com/podaenur/EVARoundSlider] EVARoundSlider
+$ git clone http://github.com/podaenur/EVARoundSlider
 ```
 You need to set UIView element on your storyboard and define is like EVARoundSliderView. EVARoundSlider has placeholder for IB (IB_DESIGNABLE).
 
