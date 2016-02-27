@@ -15,6 +15,7 @@
 		045E4D331C5628B200FED83D /* objC_roundSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045E4D321C5628B200FED83D /* objC_roundSliderTests.m */; };
 		7A3CFAB41C7CC6C600C2574B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3CFAB31C7CC6C600C2574B /* ViewController.m */; };
 		7A5A7CDF1C6B4AD400342109 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5A7CDE1C6B4AD400342109 /* UIKit.framework */; };
+		7A81FDCC1C81BA6800022037 /* EVAMathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81FDCB1C81BA6800022037 /* EVAMathTests.m */; };
 		7A92C9291C80A0EC00287DD1 /* EVAGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9221C80A0EC00287DD1 /* EVAGradient.m */; };
 		7A92C92A1C80A0EC00287DD1 /* EVAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9241C80A0EC00287DD1 /* EVAMath.m */; };
 		7A92C92B1C80A0EC00287DD1 /* EVARoundSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9261C80A0EC00287DD1 /* EVARoundSliderView.m */; };
@@ -46,6 +47,7 @@
 		7A3CFAB21C7CC6C600C2574B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7A3CFAB31C7CC6C600C2574B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7A5A7CDE1C6B4AD400342109 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A81FDCB1C81BA6800022037 /* EVAMathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAMathTests.m; sourceTree = "<group>"; };
 		7A92C9211C80A0EC00287DD1 /* EVAGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAGradient.h; sourceTree = "<group>"; };
 		7A92C9221C80A0EC00287DD1 /* EVAGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAGradient.m; sourceTree = "<group>"; };
 		7A92C9231C80A0EC00287DD1 /* EVAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAMath.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		7A92C9201C80A0EC00287DD1 /* EVARoundSlider */ = {
 			isa = PBXGroup;
 			children = (
+				7A81FDCB1C81BA6800022037 /* EVAMathTests.m */,
 				7A92C9211C80A0EC00287DD1 /* EVAGradient.h */,
 				7A92C9221C80A0EC00287DD1 /* EVAGradient.m */,
 				7A92C9231C80A0EC00287DD1 /* EVAMath.h */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81FDCC1C81BA6800022037 /* EVAMathTests.m in Sources */,
 				045E4D331C5628B200FED83D /* objC_roundSliderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

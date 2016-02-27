@@ -21,7 +21,7 @@
  *
  *  @return объект класса
  */
-- (instancetype)initWithFrame:(CGRect)frame width:(CGFloat)w arcColor:(UIColor *)c NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame width:(CGFloat)w arcColor:(UIColor *)c;
 /**
  *  Метод для смены направления арки слайдера
  *
