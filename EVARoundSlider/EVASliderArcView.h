@@ -12,7 +12,29 @@
 
 @property (nonatomic, readonly, getter = isClockwise) BOOL clockwise;
 
-- (instancetype)initWithFrame:(CGRect)frame width:(CGFloat)w arcColor:(UIColor *)c;
+/**
+ *  Метод инициализации
+ *
+ *  @param frame рамка view
+ *  @param w     ширина арки
+ *  @param c     цвет арки
+ *
+ *  @return объект класса
+ */
+- (instancetype)initWithFrame:(CGRect)frame width:(CGFloat)w arcColor:(UIColor *)c NS_DESIGNATED_INITIALIZER;
+/**
+ *  Метод для смены направления арки слайдера
+ *
+ *  @param clockwise направление прорисовки арки слайдера
+ */
 - (void)setClockwise:(BOOL)clockwise;
+/**
+ *  Метод определения начальной, конечной точек арки слайдера и направления прорисовки.
+ *
+ *  @param r      радиус арки слайдера
+ *  @param sPoint начальная координата на окружности
+ *  @param ePoint конечная координата на окружности
+ *  @param cw     направление прорисовки
+ */
 - (void)drawArcRadius:(CGFloat)r startPoint:(CGPoint)sPoint endPoint:(CGPoint)ePoint clockwise:(BOOL)cw;
 @end

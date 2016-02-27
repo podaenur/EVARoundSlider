@@ -54,7 +54,7 @@ static inline BOOL CGPointIsInfinity(CGPoint p) {
 - (CGFloat)distanceBetweenPoint:(CGPoint)p1 andPoint:(CGPoint)p2;
 
 /**
- *  Метод для вычисления угла вектора между двумя задаными углами.
+ *  Метод для вычисления угла вектора между двумя задаными углами. Угол вычисляется по сереине между задаными углами.
  *
  *  @param sAngle      первый угол в degree
  *  @param eAngle      второй уогл в degree

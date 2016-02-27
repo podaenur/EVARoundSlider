@@ -374,12 +374,12 @@ IB_DESIGNABLE
 #if TARGET_INTERFACE_BUILDER
   UILabel *placeholder = [[UILabel alloc] initWithFrame:self.bounds];
   placeholder.textColor = [UIColor grayColor];
-  placeholder.backgroundColor = [UIColor lightGrayColor];
+  placeholder.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.4f];
   placeholder.textAlignment = NSTextAlignmentCenter;
   placeholder.text = NSStringFromClass(self.class);
   self.layer.cornerRadius = 5.f;
   self.layer.borderWidth = 1.f;
-  self.layer.borderColor = [UIColor blackColor].CGColor;
+  self.layer.borderColor = [UIColor whiteColor].CGColor;
   self.clipsToBounds = YES;
   [self addSubview:placeholder];
 #else
@@ -387,8 +387,6 @@ IB_DESIGNABLE
   
   if (!self.isSetuped) {
     [self setup];
-  } else {
-    //  рисуем арку
   }
 #endif
 }
