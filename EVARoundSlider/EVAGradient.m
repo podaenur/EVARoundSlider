@@ -9,6 +9,11 @@
 #import "EVAGradient.h"
 #import "EVAMath.h"
 
+@interface EVAGradient ()
+
+@property (nonatomic) CGFloat radius;
+@end
+
 @implementation EVAGradient
 
 #pragma mark - Life cycle
@@ -45,29 +50,34 @@
 
 - (void)setup {
   self.opaque = NO;
+  _radius = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) / 2;
 }
+
+- (void)drawSliceStep:(NSUInteger)i {
+  CGFloat a = ToRad(i + 1);
+  CGFloat b = ToRad(i + 2);
+  UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:self.center
+                                                      radius:_radius
+                                                  startAngle:a
+                                                    endAngle:b
+                                                   clockwise:YES];
+  [path addLineToPoint:self.center];
+  
+  [[UIColor colorWithHue:((double)i / 360) saturation:1.f brightness:1.f alpha:1.f] set];
+  [path closePath];
+  [path fill];
+  [path stroke];
+}
+
+#pragma mark o- Overrided
 
 - (void)drawRect:(CGRect)rect {
   [super drawRect:rect];
   
   UIGraphicsBeginImageContext(self.bounds.size);
   
-  CGFloat radius = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) / 2;
-  
   for (NSUInteger i = 0; i < 360; ++i) {
-    CGFloat a = ToRad(i + 1);
-    CGFloat b = ToRad(i + 2);
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:self.center
-                                                        radius:radius
-                                                    startAngle:a
-                                                      endAngle:b
-                                                     clockwise:YES];
-    [path addLineToPoint:self.center];
-    
-    [[UIColor colorWithHue:((double)i / 360) saturation:1.f brightness:1.f alpha:1.f] set];
-    [path closePath];
-    [path fill];
-    [path stroke];
+    [self drawSliceStep:i];
   }
   
   UIImage *image = UIGraphicsGetImageFromCurrentImageContext();

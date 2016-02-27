@@ -23,21 +23,32 @@
   return sqrt(pow(deltaX, 2) + pow(deltaY, 2));
 }
 
-- (CGFloat)angleBetweenStartAngle:(CGFloat)sAngle endAngle:(CGFloat)eAngle clockwise:(BOOL)isClockwise {
-  if (!isClockwise) {
-    CGFloat t = eAngle;
-    eAngle = sAngle;
-    sAngle = t;
+//- (CGFloat)bisectorForStartAngle:(CGFloat)sAngle endAngle:(CGFloat)eAngle clockwise:(BOOL)isClockwise {
+//  if (!isClockwise) {
+//    [self swapCGFloat:&sAngle andCGFloat:&eAngle];
+//  }
+//  
+//  if ((eAngle < sAngle)) {
+//    CGFloat medium = (eAngle - ((360 - (sAngle - eAngle)) / 2));
+//    if (medium < 0) {
+//      medium += 360;
+//    }
+//    return medium;
+//  }
+//  return (eAngle - ((eAngle - sAngle) / 2));
+//}
+
+- (CGFloat)bisectorForStartAngle:(CGFloat)sAngle endAngle:(CGFloat)eAngle clockwise:(BOOL)isClockwise {
+  CGFloat bisector = (sAngle + eAngle) / 2;
+  if (!isClockwise || sAngle > eAngle) {
+    bisector += 180;
   }
   
-  if ((eAngle < sAngle)) {
-    CGFloat delta = (eAngle - ((360 - (sAngle - eAngle)) / 2));
-    if (delta < 0) {
-      delta += 360;
-    }
-    return delta;
+  if (bisector > 360) {
+    bisector -= 360;
   }
-  return (eAngle - ((eAngle - sAngle) / 2));
+  
+  return bisector;
 }
 
 - (CGPoint)pointOnCircleWithCenter:(CGPoint)c radius:(CGFloat)r forAngle:(int)angleInt {

@@ -35,7 +35,7 @@ static CGFloat const EVASliderArcViewCompensator = 1.f;
   if (self) {
     self.backgroundColor = [UIColor clearColor];
     _width = w;
-    _arcColor = (c != nil) ? c : [UIColor clearColor];;
+    _arcColor = (c != nil) ? c : [UIColor clearColor];
     _startPoint = CGPointInfinity();
     _endPoint = CGPointInfinity();
     _centerPoint = CGPointMake(CGRectGetWidth(self.bounds) / 2, CGRectGetHeight(self.bounds) / 2);

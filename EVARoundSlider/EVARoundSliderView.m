@@ -125,7 +125,7 @@ IB_DESIGNABLE
   CGFloat fAngle = [self handleAngleByIndex:0];
   CGFloat lAngle = [self handleAngleByIndex:1];
   
-  return [_math angleBetweenStartAngle:fAngle endAngle:lAngle clockwise:isClockwise];
+  return [_math bisectorForStartAngle:fAngle endAngle:lAngle clockwise:isClockwise];
 }
 
 - (UIColor *)getColorCurrentDirection {
@@ -136,7 +136,7 @@ IB_DESIGNABLE
   CGFloat fAngle = [self handleAngleByIndex:0];
   CGFloat lAngle = [self handleAngleByIndex:1];
   
-  CGFloat a = [_math angleBetweenStartAngle:fAngle endAngle:lAngle clockwise:!_arc.isClockwise];
+  CGFloat a = [_math bisectorForStartAngle:fAngle endAngle:lAngle clockwise:!_arc.isClockwise];
   return [_math getColorForAngle:a];
 }
 

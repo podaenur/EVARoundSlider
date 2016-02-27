@@ -62,7 +62,7 @@ static inline BOOL CGPointIsInfinity(CGPoint p) {
  *
  *  @return угол между задаными углами
  */
-- (CGFloat)angleBetweenStartAngle:(CGFloat)sAngle endAngle:(CGFloat)eAngle clockwise:(BOOL)isClockwise;
+- (CGFloat)bisectorForStartAngle:(CGFloat)sAngle endAngle:(CGFloat)eAngle clockwise:(BOOL)isClockwise;
 
 /**
  *  Метод расчета координаты на окружности для указаного в degree угла
