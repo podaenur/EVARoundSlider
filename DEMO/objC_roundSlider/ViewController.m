@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "EVARoundSliderView.h"
 
-static CGFloat EVAWidth = 30.f;
+static CGFloat EVAWidth = 35.f;
 
 @interface ViewController ()
 
@@ -35,6 +35,9 @@ static CGFloat EVAWidth = 30.f;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  [_IndicatorPositionSlider setThumbImage:[UIImage new] forState:UIControlStateNormal];
+  _IndicatorPositionSlider.thumbTintColor = [UIColor whiteColor];
   
   _roundSlider.dataSource = self;
   _roundSlider.delegate = self;
@@ -204,7 +207,8 @@ static CGFloat EVAWidth = 30.f;
 }
 
 - (void)slider:(EVARoundSliderView *)slider indicatorColorAtPosition:(UIColor *)color {
-  _IndicatorPositionSlider.backgroundColor = color;
+//  _IndicatorPositionSlider.backgroundColor = color;
+  _IndicatorPositionSlider.thumbTintColor = color;
 }
 
 - (void)slider:(EVARoundSliderView *)slider indicatorAngleAtPosition:(NSUInteger)angle {
