@@ -46,7 +46,7 @@
   CGFloat end = 330.f;
   CGFloat target = 170.f;
   BOOL clockwise = YES;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -55,7 +55,7 @@
   CGFloat end = 10.f;
   CGFloat target = 350.f;
   BOOL clockwise = YES;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -65,7 +65,7 @@
   CGFloat end = 330.f;
   CGFloat target = 350.f;
   BOOL clockwise = NO;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -74,7 +74,7 @@
   CGFloat end = 10.f;
   CGFloat target = 170.f;
   BOOL clockwise = NO;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -84,7 +84,7 @@
   CGFloat end = 70.f;
   CGFloat target = 50.f;
   BOOL clockwise = YES;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -93,7 +93,7 @@
   CGFloat end = 30.f;
   CGFloat target = 230.f;
   BOOL clockwise = YES;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -103,7 +103,7 @@
   CGFloat end = 70.f;
   CGFloat target = 230.f;
   BOOL clockwise = NO;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 
@@ -112,7 +112,7 @@
   CGFloat end = 30.f;
   CGFloat target = 50.f;
   BOOL clockwise = NO;
-  CGFloat middle = [_math angleBetweenStartAngle:start endAngle:end clockwise:clockwise];
+  CGFloat middle = [_math bisectorForStartAngle:start endAngle:end clockwise:clockwise];
   XCTAssertEqual(middle, target, @"test failed");
 }
 

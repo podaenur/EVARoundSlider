@@ -98,7 +98,10 @@ IB_DESIGNABLE
   }
   
   CGPoint p = [_math pointOnCircleWithCenter:_centerPoint radius:[self calculatedRadius] forAngle:(int)angle];
-  BOOL flag = [_math whetherClockwiseDirectionByPoint:p betweenPoint:[_handles[@(0)] center] andPoint:[_handles[@(1)] center] atCenter:_centerPoint];
+  BOOL flag = [_math whetherClockwiseDirectionByPoint:p
+                                         betweenPoint:[(UIView *)_handles[@(0)] center]
+                                             andPoint:[(UIView *)_handles[@(1)] center]
+                                             atCenter:_centerPoint];
   [_arc setClockwise:flag];
   [self informDelegateAboutHandles];
 }
@@ -286,7 +289,10 @@ IB_DESIGNABLE
 - (void)drawArc {
   if (_arc) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [_arc drawArcRadius:[self calculatedRadius] startPoint:[_handles[@(0)] center] endPoint:[_handles[@(1)] center] clockwise:(_direction == EVAArcDirectionConterclockwise) ? NO : YES];
+      [_arc drawArcRadius:[self calculatedRadius]
+               startPoint:[(UIView *)_handles[@(0)] center]
+                 endPoint:[(UIView *)_handles[@(1)] center]
+                clockwise:(_direction == EVAArcDirectionConterclockwise) ? NO : YES];
     });
   }
 }
@@ -365,7 +371,7 @@ IB_DESIGNABLE
 }
 
 - (CGFloat)handleAngleByIndex:(NSUInteger)index {
-  return AngleFromNorth(_centerPoint, [_handles[@(index)] center], EVA_FLIPPED);
+  return AngleFromNorth(_centerPoint, [(UIView *)_handles[@(index)] center], EVA_FLIPPED);
 }
 
 #pragma mark o- Overrided
