@@ -32,6 +32,11 @@ typedef NS_ENUM(NSUInteger, EVAArcDirection) {
 @property (nonatomic, weak) id<EVARoundSliderDataSource> dataSource;
 @property (nonatomic, weak) id<EVARoundSliderDelegate> delegate;
 
+@property (nonatomic, readonly) CGFloat radius;
+@property (nonatomic, readonly) CGFloat sliderWidth;
+@property (nonatomic, readonly) EVASliderType sliderType;
+@property (nonatomic, readonly) NSUInteger numberOfHandles;
+
 #pragma mark Set data
 /**
  *  Метод для перемещения ручки слайдера в заданый угол
@@ -95,6 +100,7 @@ typedef NS_ENUM(NSUInteger, EVAArcDirection) {
  *  @return цвет между ручками
  */
 - (UIColor *)getColorCurrentDirection;
+
 @end
 
 #pragma mark -

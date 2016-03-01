@@ -6,6 +6,10 @@
 //  Copyright © 2015 Eugeny Akhmerov. All rights reserved.
 //
 
+//#define SETTING 1
+//#define SETTING 2
+#define SETTING 3
+
 #import "ViewController.h"
 #import "EVARoundSliderView.h"
 
@@ -15,8 +19,14 @@ static CGFloat EVAWidth = 35.f;
 
 @property (weak, nonatomic) IBOutlet EVARoundSliderView *roundSlider;
 @property (weak, nonatomic) IBOutlet UIView *leftIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *leftLabel;
+
 @property (weak, nonatomic) IBOutlet UIView *rightIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
+
 @property (weak, nonatomic) IBOutlet UIView *middleIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *middleLabel;
+
 @property (weak, nonatomic) IBOutlet UISlider *IndicatorPositionSlider;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *guidedColor;
 
@@ -45,6 +55,16 @@ static CGFloat EVAWidth = 35.f;
                [UIColor yellowColor],
                [UIColor greenColor],
                [UIColor blueColor] ];
+  
+#if SETTING == 1
+  _leftLabel.hidden = NO;
+  _middleLabel.hidden = NO;
+  _rightLabel.hidden = NO;
+#else
+  _leftLabel.hidden = YES;
+  _middleLabel.hidden = YES;
+  _rightLabel.hidden = YES;
+#endif
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -81,25 +101,41 @@ static CGFloat EVAWidth = 35.f;
 }
 
 - (NSUInteger)numberOfHandlesAtSlider:(EVARoundSliderView *)slider {
-//  return 1;
-  
+#if SETTING == 1
   return 2;
+#elif SETTING == 2
+  return 1;
+#else
+  return 2;
+#endif
 }
 
 - (EVASliderType)typeOfSlider:(EVARoundSliderView *)slider {
+#if SETTING == 1
+  return EVASliderTypePlain;
+#elif SETTING == 2
   return EVASliderTypeGradient;
+#else
+  return EVASliderTypeGradient;
+#endif
 }
 
 - (UIColor *)shadowArcColorAtSlider:(EVARoundSliderView *)slider {
-  return [[UIColor blackColor] colorWithAlphaComponent:0.7f];
+#if SETTING == 1
+  return [[UIColor blackColor] colorWithAlphaComponent:0.4f];
+#elif SETTING == 2
+  return [UIColor whiteColor];
+#else
+  return [[UIColor whiteColor] colorWithAlphaComponent:0.6f];
+#endif
 }
 
 - (EVAArcDirection)arcDrawingDirectionForSlider:(EVARoundSliderView *)slider {
-//  return EVAArcDirectionClockwise;
-  
-//  return EVAArcDirectionConterclockwise;
-  
+#if SETTING == 1
+  return EVAArcDirectionClockwise;
+#else
   return EVAArcDirectionCalculated;
+#endif
 }
 
 - (EVATouchOffset)touchRecognizeOffsetForSlider:(EVARoundSliderView *)slider {
@@ -119,11 +155,20 @@ static CGFloat EVAWidth = 35.f;
 //}
 
 - (UIView *)centerViewForSlider:(EVARoundSliderView *)slider {
-  return nil;
-  
-  UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 200.f)];
-  centerView.backgroundColor = [UIColor orangeColor];
+#if SETTING == 1
+  UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 300.f, 300.f)];
+  centerView.backgroundColor = [UIColor blackColor];
   return centerView;
+#elif SETTING == 2
+  UILabel *centerView = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 150.f, 100.f)];
+  centerView.text = @"Any view may be here";
+  centerView.textColor = [UIColor blackColor];
+  centerView.textAlignment = NSTextAlignmentCenter;
+  centerView.font = [UIFont fontWithName:@"HelveticaNeue" size:15.f];
+  return centerView;
+#else
+  return nil;
+#endif
 }
 
 - (UIView *)handleViewForSlider:(EVARoundSliderView *)slider atIndex:(NSUInteger)index {
@@ -199,6 +244,24 @@ static CGFloat EVAWidth = 35.f;
 
 - (void)slider:(EVARoundSliderView *)slider angleHandlePosition:(NSUInteger)angle atIndex:(NSUInteger)index {
 //  NSLog(@"handle%d angle %d", index + 1, angle);
+#if SETTING == 1
+  switch (index) {
+    case 0:
+      _leftLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)angle];
+      break;
+    case 1:
+      _middleLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)[slider angleBetweenHandlesClockwiseCalculating:YES]];
+      _rightLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)angle];
+      break;
+      
+    default:
+      break;
+  }
+#elif SETTING == 2
+  
+#else
+  
+#endif
 }
 
 //  indicator

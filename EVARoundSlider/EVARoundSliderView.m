@@ -18,11 +18,11 @@ IB_DESIGNABLE
 //  static
 @property (nonatomic, getter = isSetuped) BOOL setupComplite;
 @property (nonatomic) EVAMath *math;
-@property (nonatomic) CGFloat radius;
+@property (nonatomic, readwrite) CGFloat radius;
 @property (nonatomic) CGPoint centerPoint;
-@property (nonatomic) CGFloat sliderWidth;
-@property (nonatomic) EVASliderType sliderType;
-@property (nonatomic) NSUInteger numberOfHandles;
+@property (nonatomic, readwrite) CGFloat sliderWidth;
+@property (nonatomic, readwrite) EVASliderType sliderType;
+@property (nonatomic, readwrite) NSUInteger numberOfHandles;
 @property (nonatomic) NSMutableDictionary *handles;
 @property (nonatomic) UIView *indicator;
 
@@ -72,7 +72,7 @@ IB_DESIGNABLE
 - (void)moveIndicatorToAngle:(NSUInteger)angle {
   NSAssert(((angle >= 0) && (angle <= 360)), @"Angle beyon bounds");
   
-  [self moveView:_indicator toAngle:angle];
+  [self moveView:_indicator toAngle:(int)angle];
   [self informDelegateAboutIndicator];
 }
 
@@ -107,6 +107,7 @@ IB_DESIGNABLE
 }
 
 - (void)directArcByColor:(UIColor *)color {
+  NSAssert(_sliderType == EVASliderTypeGradient, @"Method only for EVASliderTypeGradient");
   NSAssert((_handles.count > 1), @"Method only for two handles");
   NSAssert(color, @"Color cannot be nil value");
   
@@ -140,6 +141,7 @@ IB_DESIGNABLE
   CGFloat lAngle = [self handleAngleByIndex:1];
   
   CGFloat a = [_math bisectorForStartAngle:fAngle endAngle:lAngle clockwise:!_arc.isClockwise];
+  
   return [_math getColorForAngle:a];
 }
 
@@ -224,7 +226,7 @@ IB_DESIGNABLE
     CGRect frame = CGRectMake(0.f, 0.f, s, s);
     UIView *centerCanvas = [[UIView alloc] initWithFrame:frame];
     centerCanvas.center  =_centerPoint;
-    centerCanvas.backgroundColor = self.superview.backgroundColor;
+    centerCanvas.backgroundColor = self.superview.superview.backgroundColor;
     centerCanvas.layer.cornerRadius = s / 2;
     centerCanvas.clipsToBounds = YES;
     [self addSubview:centerCanvas];
