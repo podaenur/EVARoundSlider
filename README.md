@@ -1,11 +1,11 @@
 # EVARoundSlider
 
 <img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side2.png" 
-width="240" height="180" border="10" />
+width="375" height="667" border="10" />
 <img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_portrait.png" 
-width="240" height="180" border="10" />
+width="375" height="667" border="10" />
 <img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side1.png" 
-width="240" height="180" border="10" />
+width="375" height="667" border="10" />
 
 EVARoundSlider - round slider with extended typing. You can use plain or gradient slider. You can determine one or two handles. As addition you can determine indicator.
 
