@@ -7,6 +7,9 @@ EVARoundSlider - round slider with extended typing. You can use plain or gradien
   - Indicator element on/off
   - Change arc direction by touch
 
+<video src="https://youtu.be/6FqsfMz0wWw" controls>
+</video>
+
 ### Version
 1.0
 
@@ -17,6 +20,8 @@ $ git clone http://github.com/podaenur/EVARoundSlider
 ```
 You need to set UIView element on your storyboard and define is like EVARoundSliderView. EVARoundSlider has placeholder for IB (IB_DESIGNABLE).
 
+<video src="https://youtu.be/moi_cEGQVwA" controls>
+</video>
 
 License
 ----
