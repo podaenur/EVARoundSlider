@@ -7,7 +7,7 @@ EVARoundSlider - round slider with extended typing. You can use plain or gradien
   - Indicator element on/off
   - Change arc direction by touch
 
-<iframe width="420" height="315" src="https://youtu.be/6FqsfMz0wWw" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/6FqsfMz0wWw" frameborder="0" allowfullscreen></iframe>
 
 ### Version
 1.0
