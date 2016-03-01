@@ -1,15 +1,11 @@
 # EVARoundSlider
 
-<!--<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side2.png" -->
-<!--width="250" height="300" border="10" />-->
-<!--<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_portrait.png" -->
-<!--width="300" height="300" border="10" />-->
-<!--<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side1.png" -->
-<!--width="350" height="300" border="10" />-->
-
-<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side2.png" />
-<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_portrait.png" />
-<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side1.png" />
+<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side2.png" 
+width="200" height="200" border="10" />
+<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_portrait.png" 
+width="200" height="200" border="10" />
+<img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side1.png" 
+width="200" height="200" border="10" />
 
 EVARoundSlider - round slider with extended typing. You can use plain or gradient slider. You can determine one or two handles. As addition you can determine indicator.
 
