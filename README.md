@@ -1,11 +1,11 @@
 # EVARoundSlider
 
 <img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side1.png" 
-width="250" height="250" border="10" />
+width="250" height="250" border="1" />
 <img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_portrait.png" 
-width="250" height="250" border="10" />
+width="250" height="250" border="1" />
 <img src="https://github.com/podaenur/EVARoundSlider/blob/master/DEMO/previews/iphone6_silver_side2.png" 
-width="250" height="250" border="10" />
+width="250" height="250" border="1" />
 
 EVARoundSlider - round slider with extended typing. You can use plain or gradient slider. You can determine one or two handles. As addition you can determine indicator.
 
@@ -16,7 +16,7 @@ EVARoundSlider - round slider with extended typing. You can use plain or gradien
 
 <a href="https://youtu.be/6FqsfMz0wWw" target="_blank">
 <img src="https://i.ytimg.com/vi/6FqsfMz0wWw/2.jpg?time=1456823296371" 
-width="240" height="180" border="10" />
+width="240" height="180" border="1" />
 </a>
 
 ### Version
@@ -31,7 +31,7 @@ You need to set UIView element on your storyboard and define is like EVARoundSli
 
 <a href="https://youtu.be/moi_cEGQVwA" target="_blank">
 <img src="https://i.ytimg.com/vi/moi_cEGQVwA/2.jpg?time=1456823394704" 
-width="240" height="180" border="10" />
+width="240" height="180" border="1" />
 </a>
 
 
