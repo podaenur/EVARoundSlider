@@ -13,7 +13,7 @@ width="240" height="180" border="10" />
 </a>
 
 ### Version
-1.0
+https://img.shields.io/badge/version-1.0.0-green.svg
 
 ### Installation
 
