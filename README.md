@@ -7,8 +7,13 @@ EVARoundSlider - round slider with extended typing. You can use plain or gradien
   - Indicator element on/off
   - Change arc direction by touch
 
+<a href="https://youtu.be/6FqsfMz0wWw" target="_blank">
+<img src="https://i.ytimg.com/vi/6FqsfMz0wWw/2.jpg?time=1456823296371" 
+width="240" height="180" border="10" />
+</a>
+
 ### Version
-1.0
+<img src="https://img.shields.io/badge/version-1.0.0-green.svg"/>
 
 ### Installation
 
@@ -16,6 +21,11 @@ EVARoundSlider - round slider with extended typing. You can use plain or gradien
 $ git clone http://github.com/podaenur/EVARoundSlider
 ```
 You need to set UIView element on your storyboard and define is like EVARoundSliderView. EVARoundSlider has placeholder for IB (IB_DESIGNABLE).
+
+<a href="https://youtu.be/moi_cEGQVwA" target="_blank">
+<img src="https://i.ytimg.com/vi/moi_cEGQVwA/2.jpg?time=1456823394704" 
+width="240" height="180" border="10" />
+</a>
 
 
 License
