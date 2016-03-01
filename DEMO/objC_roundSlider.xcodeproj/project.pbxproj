@@ -20,6 +20,9 @@
 		7A92C92A1C80A0EC00287DD1 /* EVAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9241C80A0EC00287DD1 /* EVAMath.m */; };
 		7A92C92B1C80A0EC00287DD1 /* EVARoundSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9261C80A0EC00287DD1 /* EVARoundSliderView.m */; };
 		7A92C92C1C80A0EC00287DD1 /* EVASliderArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A92C9281C80A0EC00287DD1 /* EVASliderArcView.m */; };
+		7AD2CC691C85A134004B8699 /* iphone6_silver_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2CC661C85A134004B8699 /* iphone6_silver_portrait.png */; };
+		7AD2CC6A1C85A134004B8699 /* iphone6_silver_side1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2CC671C85A134004B8699 /* iphone6_silver_side1.png */; };
+		7AD2CC6B1C85A134004B8699 /* iphone6_silver_side2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2CC681C85A134004B8699 /* iphone6_silver_side2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		7A92C9261C80A0EC00287DD1 /* EVARoundSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVARoundSliderView.m; sourceTree = "<group>"; };
 		7A92C9271C80A0EC00287DD1 /* EVASliderArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVASliderArcView.h; sourceTree = "<group>"; };
 		7A92C9281C80A0EC00287DD1 /* EVASliderArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVASliderArcView.m; sourceTree = "<group>"; };
+		7AD2CC661C85A134004B8699 /* iphone6_silver_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6_silver_portrait.png; sourceTree = "<group>"; };
+		7AD2CC671C85A134004B8699 /* iphone6_silver_side1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6_silver_side1.png; sourceTree = "<group>"; };
+		7AD2CC681C85A134004B8699 /* iphone6_silver_side2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6_silver_side2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			children = (
 				7A5A7CDE1C6B4AD400342109 /* UIKit.framework */,
 				040BEC551C58C36E00E36696 /* Default-568h@2x.png */,
+				7AD2CC651C85A134004B8699 /* previews */,
 				7A92C9201C80A0EC00287DD1 /* EVARoundSlider */,
 				045E4D151C5628B200FED83D /* objC_roundSlider */,
 				045E4D2F1C5628B200FED83D /* objC_roundSliderTests */,
@@ -153,6 +160,16 @@
 			);
 			name = EVARoundSlider;
 			path = ../EVARoundSlider;
+			sourceTree = "<group>";
+		};
+		7AD2CC651C85A134004B8699 /* previews */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2CC661C85A134004B8699 /* iphone6_silver_portrait.png */,
+				7AD2CC671C85A134004B8699 /* iphone6_silver_side1.png */,
+				7AD2CC681C85A134004B8699 /* iphone6_silver_side2.png */,
+			);
+			path = previews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				045E4D221C5628B200FED83D /* Main.storyboard in Resources */,
+				7AD2CC6A1C85A134004B8699 /* iphone6_silver_side1.png in Resources */,
+				7AD2CC6B1C85A134004B8699 /* iphone6_silver_side2.png in Resources */,
 				040BEC561C58C36E00E36696 /* Default-568h@2x.png in Resources */,
 				045E4D241C5628B200FED83D /* Images.xcassets in Resources */,
+				7AD2CC691C85A134004B8699 /* iphone6_silver_portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
