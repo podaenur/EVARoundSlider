@@ -14,10 +14,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//Sourcecode from Apple example clockControl
-//Calculate the direction in degrees from a center point to an arbitrary position.
-
+/**
+ *  Method to calculate angle in degree for current point
+ *
+ *  @param centerPoint  Center point for calculating angle
+ *  @param currentPoint Source point for calculating angle
+ *  @param flipped      YES if in iOS. Otherwise NO
+ *
+ *  @return Angle value in degree
+ */
 static inline float AngleFromNorth(CGPoint centerPoint, CGPoint currentPoint, BOOL flipped) {
+  //Sourcecode from Apple example clockControl
+  //Calculate the direction in degrees from a center point to an arbitrary position.
+
   CGFloat x = currentPoint.x - centerPoint.x;
   CGFloat y = currentPoint.y - centerPoint.y;
   if (!flipped) {
@@ -33,28 +42,37 @@ static inline float AngleFromNorth(CGPoint centerPoint, CGPoint currentPoint, BO
   return (result >=0  ? result : result + 360.0);
 }
 
+/**
+ Returns a point far far beyond screen
+ */
 static inline CGPoint CGPointInfinity() {
   return CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
 };
 
+/**
+ Return true if source point is far far beyond screen. Otherwise false.
+ */
 static inline BOOL CGPointIsInfinity(CGPoint p) {
    return CGPointEqualToPoint(p, CGPointInfinity());
 };
 
+/**
+ *  Class encapsulates common mathematical methods
+ */
 @interface EVAMath : NSObject
 
 /**
- *  Метод вычисления длины отрезка
+ *  Method for calculating length of segment
  *
- *  @param p1 координата первой точки
- *  @param p2 координата второй точки
+ *  @param p1 first point coordinate
+ *  @param p2 second point coordinate
  *
- *  @return растояние между точками
+ *  @return Distance between points
  */
 - (CGFloat)distanceBetweenPoint:(CGPoint)p1 andPoint:(CGPoint)p2;
 
 /**
- *  Метод для вычисления угла вектора между двумя задаными углами. Угол вычисляется по сереине между задаными углами.
+ *  Метод для вычисления биссектрисы между двумя задаными углами. Угол вычисляется по сереине между задаными углами.
  *
  *  @param sAngle      первый угол в degree
  *  @param eAngle      второй уогл в degree

@@ -60,20 +60,18 @@
 }
 
 - (void)swapCGFloat:(inout CGFloat *)arg1 andCGFloat:(inout CGFloat *)arg2 {
-  @synchronized([self class]) {
-    CGFloat bufer = *arg1;
-    *arg1 = *arg2;
-    *arg2 = bufer;
-  }
+  CGFloat bufer = *arg1;
+  *arg1 = *arg2;
+  *arg2 = bufer;
 }
 
 - (BOOL)whetherClockwiseDirectionByPoint:(CGPoint)p betweenPoint:(CGPoint)s andPoint:(CGPoint)e atCenter:(CGPoint)c {
-    CGFloat startAngle   = AngleFromNorth(c, s, NO);
-    CGFloat currentAngle = AngleFromNorth(c, p, NO);
-    CGFloat endAngle     = AngleFromNorth(c, e, NO);
-    
-    return (endAngle > startAngle)  ? (currentAngle > startAngle && currentAngle < endAngle)
-    : (currentAngle > startAngle || currentAngle < endAngle);
+  CGFloat startAngle   = AngleFromNorth(c, s, NO);
+  CGFloat currentAngle = AngleFromNorth(c, p, NO);
+  CGFloat endAngle     = AngleFromNorth(c, e, NO);
+  
+  return (endAngle > startAngle)  ? (currentAngle > startAngle && currentAngle < endAngle)
+                                  : (currentAngle > startAngle || currentAngle < endAngle);
 }
 
 #pragma mark - Private

@@ -20,7 +20,6 @@ typedef NS_ENUM(NSUInteger, EVASliderType) {
   EVASliderTypeGradient
 };
 
-
 typedef NS_ENUM(NSUInteger, EVAArcDirection) {
   EVAArcDirectionClockwise = 0,
   EVAArcDirectionConterclockwise,
